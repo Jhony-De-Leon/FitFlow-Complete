@@ -1,0 +1,225 @@
+<resources>
+    <string name="app_name">FitFlow</string>
+    <string name="slogan">Tu coach virtual de ejercicio</string>
+    <string name="headline">¡Transforma tu vida!</string>
+    <string name="description">Entrena de forma inteligente con rutinas personalizadas y alcanza tus objetivos de fitness</string>
+    <string name="register_button_text">Registrarse</string>
+    <string name="login_button_text">Iniciar sesión</string>
+
+    <!-- Registration Multi-Step -->
+    <string name="title_register_activity">Registrarse</string>
+
+    <!-- Step 1: Personal Info -->
+    <string name="personal_info_title">Información personal</string>
+    <string name="personal_info_subtitle">Cuéntanos un poco sobre ti</string>
+    <string name="label_name">Nombre *</string>
+    <string name="hint_name">Tu nombre</string>
+    <string name="label_surname">Apellido *</string>
+    <string name="hint_surname">Tu apellido</string>
+    <string name="label_age">Edad</string>
+    <string name="hint_age_placeholder">25</string>
+    <string name="label_gender">Genero</string>
+    <string name="prompt_select_gender">Selecciona tu género</string>
+
+    <!-- Step 2: Physical Info -->
+    <string name="physical_info_title">Información física</string>
+    <string name="physical_info_subtitle">Esto nos ayuda a personalizar tu experiencia</string>
+    <string name="label_weight">Peso (kg)</string>
+    <string name="hint_weight_placeholder">70</string>
+    <string name="label_height">Altura (cm)</string>
+    <string name="hint_height_placeholder">170</string>
+    <string name="label_main_objective">Objetivo principal</string>
+    <string name="prompt_select_objective">Selecciona tu objetivo</string>
+
+    <!-- Step 3: Account Details -->
+    <string name="create_account_title_step3">Crea tu cuenta</string>
+    <string name="create_account_subtitle_step3">Últimos detalles para empezar</string>
+    <string name="label_email">Correo electrónico *</string>
+    <string name="hint_email_placeholder">tu@email.com</string>
+    <string name="label_password">Contraseña *</string>
+    <string name="hint_password_placeholder">••••••••</string>
+    <string name="label_confirm_password">Confirmar contraseña *</string>
+
+    <!-- Common Buttons/Text for Registration Steps -->
+    <string name="button_next">Siguiente</string>
+    <string name="button_previous">Anterior</string>
+    <string name="button_start_journey">¡Comenzar mi journey!</string>
+    <string name="text_already_have_account_question">¿Ya tienes cuenta?</string>
+    <string name="text_login_here_link">Inicia sesión aqui</string>
+
+    <!-- Login Screen -->
+    <string name="title_login_activity">@string/login_button_text</string>
+    <string name="login_screen_title">¡Bienvenido de vuelta!</string>
+    <string name="login_screen_subtitle">Continúa tu journey hacia un estilo de vida más saludable</string>
+    <string name="button_login_submit">Iniciar sesión</string>
+    <string name="text_no_account_question">¿No tienes cuenta?</string>
+    <string name="text_register_here_link">Regístrate aquí</string>
+    <string name="text_forgot_password_link">¿Olvidaste tu contraseña?</string>
+
+    <!-- Forgot Password Screen -->
+    <string name="title_forgot_password_activity">Olvidaste tu contraseña</string>
+    <string name="forgot_password_subtitle">Ingresa tu correo electrónico para reestablecer tu contraseña</string>
+    <string name="button_send_link">Enviar enlace</string>
+
+    <!-- Change Password Screen -->
+    <string name="title_change_password_activity">Cambiar contraseña</string>
+    <string name="change_password_subtitle">Ingresa tu nueva contraseña</string>
+    <string name="label_new_password">Nueva contraseña</string>
+    <string name="label_confirm_new_password">Confirmar nueva contraseña</string>
+    <string name="button_save_password">Guardar contraseña</string>
+
+    <!-- Home Screen (HomeActivity & HomeFragment) -->
+    <string name="title_home_nav">Inicio</string>
+    <string name="title_routines_nav">Rutinas</string>
+    <string name="title_progress_nav">Progreso</string>
+    <string name="title_profile_nav">Perfil</string>
+    <string name="home_greeting_user_format">¡Hola, %1$s!</string>
+    <string name="home_subtitle_ready_to_train">Listo para entrenar hoy</string>
+    <string name="home_card_todays_progress_title">Progreso de hoy</string>
+    <string name="home_label_calories">Calorías</string>
+    <string name="home_label_minutes">Minutos</string>
+    <string name="home_label_exercises">Ejercicios</string>
+    <string name="home_label_percentage_completed_format">%1$s%% completado</string>
+    <string name="home_button_start_routine">Iniciar rutina</string>
+    <string name="home_button_view_progress">Ver progreso</string>
+    <string name="home_card_nutritional_tip_title">Tip nutricional</string>
+    <string name="home_placeholder_nutritional_tip">Consume proteína dentro de 30 minutos post-entreno para maximizar la recuperación.</string>
+    <string name="content_desc_notifications">Notificaciones</string>
+    <string name="content_desc_ai_chat">Chat con FlowCoach</string>
+    <string name="content_desc_logout">Cerrar sesión</string>
+    <string name="placeholder_user_name">Jhonny</string>
+    <string name="placeholder_calories_value">450</string>
+    <string name="placeholder_minutes_value">35</string>
+    <string name="placeholder_exercises_value">3/4</string>
+    <string name="placeholder_progress_percentage_value">75</string>
+    <string name="home_toast_notification_clicked">Notificación presionada</string>
+    <string name="home_toast_cannot_navigate_routines">No se puede navegar a rutinas</string>
+
+    <!-- Routines Screen (RoutinesFragment & Adapter) -->
+    <string name="routines_search_hint">Buscar rutinas…</string>
+    <string name="routines_recommended_label">Recomendado</string>
+    <string name="routines_transformation_title">Transformación 30 días</string>
+    <string name="routines_transformation_description">Plan completo para transformar tu cuerpo en un mes</string>
+    <string name="routines_duration_difficulty_format">%1$s min  •  %2$s</string>
+    <string name="routines_button_start_now">Iniciar ahora</string>
+    <string name="routines_strength_title">Fuerza completa</string>
+    <string name="routines_yoga_title">Yoga matutino</string>
+    <string name="routines_hiit_title">HIIT explosivo</string>
+    <string name="routines_level_intermediate">Intermedio</string>
+    <string name="routines_level_beginner">Principiante</string>
+    <string name="routines_level_advanced">Avanzado</string>
+    <string name="routines_category_strength">Fuerza</string>
+    <string name="routines_category_flexibility">Flexibilidad</string>
+    <string name="content_desc_search_routines">Buscar rutinas</string>
+    <string name="routines_toast_start_recommended_implement">Iniciar rutina recomendada - Implementar</string>
+    <string name="routines_sample_full_body_express_title">Cuerpo Completo Express</string>
+    <string name="routines_sample_cardio_blast_title">Explosión de Cardio</string>
+    <string name="routines_toast_search_toolbar_format">Buscar (Toolbar): %1$s</string>
+    <string name="routines_adapter_toast_view_details_format">Ver detalles de: %1$s</string>
+    <string name="routines_adapter_toast_start_routine_format">Iniciar: %1$s</string> <!-- Considerar eliminar si ya no se usa -->
+
+    <!-- ActiveRoutineActivity -->
+    <string name="active_routine_label">Rutina Activa</string>
+    <string name="active_routine_executing_format">Ejecutando: %1$s</string>
+    <string name="active_routine_executing_unknown">Ejecutando: Rutina Desconocida</string>
+    <string name="active_routine_no_exercises">No hay ejercicios específicos listados para esta rutina.</string>
+    <string name="active_routine_error_data_missing">Error: Faltan datos de la rutina.</string>
+    <string name="active_routine_user_not_logged_in">Usuario no conectado. No se puede guardar el registro.</string>
+    <string name="active_routine_completed_log_saved_format">%1$s ¡completada! Registro guardado.</string>
+    <string name="active_routine_placeholder_info">(Esta es una pantalla de marcador de posición para la rutina activa.)</string>
+    <string name="active_routine_exercises_title">Ejercicios:</string>
+    <string name="active_routine_finish_button">Finalizar Rutina</string>
+    <string name="timer_default_time">00:00:00</string>
+    <string name="timer_button_start">Iniciar</string>
+    <string name="timer_button_pause">Pausar</string>
+    <string name="timer_button_resume">Reanudar</string>
+    <string name="timer_button_reset">Reiniciar</string>
+
+    <!-- Progress Screen (ProgressFragment) -->
+    <string name="progress_title_toolbar">Tu progreso</string>
+    <string name="progress_calories_burned_label">Calorías quemadas</string>
+    <string name="progress_hours_trained_label">Horas entrenadas</string>
+    <string name="progress_monthly_goals_title">Objetivos del mes</string>
+    <string name="progress_trainings_label_format">Entrenamientos (%1$s/%2$s)</string>
+    <string name="progress_weight_goal_label_format">Peso objetivo (%1$skg más)</string>
+    <string name="progress_achievement_first_week_title">Primera semana</string>
+    <string name="progress_achievement_first_week_desc">Completaste tu primera semana</string>
+    <string name="progress_achievement_fire_streak_title">Racha de fuego</string>
+    <string name="progress_achievement_fire_streak_desc_format">%1$s días consecutivos</string>
+    <string name="progress_status_unlocked">Desbloqueado</string>
+    <string name="placeholder_progress_calories">1,850</string>
+    <string name="placeholder_progress_hours">12.5</string>
+    <string name="placeholder_progress_trainings_current">18</string>
+    <string name="placeholder_progress_trainings_total">20</string>
+    <string name="placeholder_progress_weight_diff">-2</string>
+    <string name="placeholder_progress_streak_days">5</string>
+
+    <!-- Profile Screen (ProfileFragment) -->
+    <string name="profile_user_name_placeholder">jhony de leon</string>
+    <string name="profile_user_email_placeholder">jdeleonpmium@gmail.com</string>
+    <string name="profile_avatar_placeholder_initials">JD</string> <!-- Cadena añadida -->
+    <string name="profile_label_years">Años</string>
+    <string name="profile_placeholder_years">20</string>
+    <string name="profile_label_weight_card">Peso</string>
+    <string name="profile_placeholder_weight_card">180kg</string>
+    <string name="profile_label_height_card">Altura</string>
+    <string name="profile_placeholder_height_card">175cm</string>
+    <string name="profile_label_objective_card">Objetivo</string>
+    <string name="profile_placeholder_objective_text">Perder peso</string> <!-- Example, align with objetivos array -->
+    <string name="profile_label_active_days">Días activo</string>
+    <string name="profile_placeholder_active_days">15</string>
+    <string name="profile_label_achievements">Logros</string>
+    <string name="profile_placeholder_achievements">5</string>
+    <string name="profile_label_current_weight">Peso actual</string>
+    <string name="profile_placeholder_current_weight">180kg</string>
+    <string name="profile_option_settings">Configuración</string>
+    <string name="profile_option_detailed_stats">Estadísticas detalladas</string>
+    <string name="profile_option_personal_goals">Objetivos personales</string>
+    <string name="profile_option_help_support">Ayuda y soporte</string>
+    <string name="profile_button_logout">Cerrar sesión</string>
+
+    <!-- FlowCoach Screen (FlowCoachActivity) -->
+    <string name="title_activity_flow_coach">FlowCoach</string>
+    <string name="flowcoach_title">FlowCoach</string>
+    <string name="flowcoach_status_online">En línea</string>
+    <string name="flowcoach_welcome_message">¡Hola! Soy FlowCoach, tu asistente virtual de fitness 🤗 ¿En qué puedo ayudarte hoy?</string>
+    <string name="flowcoach_suggestion_how_to_start">¿Cómo empezar a entrenar?</string>
+    <string name="flowcoach_suggestion_beginner_routine">Rutina para principiantes</string>
+    <string name="flowcoach_suggestion_tips">Consejos de nutrición</string>
+    <string name="flowcoach_message_hint">Pregúntale cualquier cosa a FlowCoach…</string>
+    <string name="flowcoach_disclaimer">FlowCoach puede cometer errores. Verifica la información importante.</string>
+    <string name="flowcoach_content_desc_send_message">Enviar mensaje</string>
+    <string name="flowcoach_content_desc_avatar">Avatar de FlowCoach</string>
+
+
+    <!-- Arrays for Spinners -->
+    <string-array name="generos">
+        <item>@string/prompt_select_gender</item>
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Otro</item>
+    </string-array>
+
+    <string-array name="objetivos">
+        <item>@string/prompt_select_objective</item>
+        <item>Perder peso</item>
+        <item>Ganar músculo</item>
+        <item>Mantener peso</item>
+        <item>Mejorar resistencia</item>
+        <item>Estar más saludable</item>
+    </string-array>
+
+    <string-array name="nutritional_tips">
+        <item>Bebe al menos 8 vasos de agua al día para mantenerte hidratado.</item>
+        <item>Incluye una variedad de frutas y verduras coloridas en tu dieta diaria.</item>
+        <item>Consume proteína dentro de los 30 minutos posteriores al entrenamiento para ayudar a la recuperación muscular.</item>
+        <item>Opta por granos integrales en lugar de refinados para obtener más fibra y nutrientes.</item>
+        <item>Controla las porciones para evitar comer en exceso, incluso alimentos saludables.</item>
+        <item>Limita el consumo de azúcares añadidos y bebidas azucaradas.</item>
+        <item>Prepara tus comidas en casa con más frecuencia para controlar los ingredientes y las calorías.</item>
+        <item>No te saltes el desayuno; te da energía para comenzar el día.</item>
+        <item>Duerme lo suficiente (7-9 horas) ya que el sueño afecta tu metabolismo y tus elecciones de alimentos.</item>
+        <item>Lee las etiquetas nutricionales para tomar decisiones informadas sobre los alimentos.</item>
+    </string-array>
+
+</resources>

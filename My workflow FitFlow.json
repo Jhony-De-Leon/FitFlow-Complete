@@ -1,0 +1,202 @@
+{
+  "name": "My workflow FitFlow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "progresosFitFlow",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "12bc67ba-9a47-4116-b2eb-3c31f684543f",
+      "name": "Webhook",
+      "webhookId": "228e28d8-583e-4c78-87cf-3e4654cb7fdd"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1tHYrRtSv4kaIQPfC5BtWW9W34Ol2CxQO1CSdO-hyRjY",
+          "mode": "list",
+          "cachedResultName": "Progresos_Fitness",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tHYrRtSv4kaIQPfC5BtWW9W34Ol2CxQO1CSdO-hyRjY/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Progresos",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1tHYrRtSv4kaIQPfC5BtWW9W34Ol2CxQO1CSdO-hyRjY/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Usuario": "={{ $json.body.userName }}",
+            "Fecha": "={{ $json.body.date }}",
+            "Progreso": "={{ $json.body.progress }}",
+            "Duración": "={{ $json.body.duration }}",
+            "Calorias": "={{ $json.body.calories }}",
+            "Rutina ": "={{ $json.body.routineTitle }}",
+            "Minutos entrenados": "={{ $json.body.monthlyMinutes }}",
+            "Clorias quemadas": "={{ $json.body.monthlyCalories }}",
+            "Ejercicios Completados ": "={{ $json.body.monthlyExercises }}",
+            "Días de entrenamiento": "={{ $json.body.monthlyDays }}"
+          },
+          "matchingColumns": [
+            "Usuario"
+          ],
+          "schema": [
+            {
+              "id": "Usuario",
+              "displayName": "Usuario",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Fecha",
+              "displayName": "Fecha",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Progreso",
+              "displayName": "Progreso",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Rutina ",
+              "displayName": "Rutina ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Duración",
+              "displayName": "Duración",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Calorias",
+              "displayName": "Calorias",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Minutos entrenados",
+              "displayName": "Minutos entrenados",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Clorias quemadas",
+              "displayName": "Clorias quemadas",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Ejercicios Completados ",
+              "displayName": "Ejercicios Completados ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Días de entrenamiento",
+              "displayName": "Días de entrenamiento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        288,
+        0
+      ],
+      "id": "d69bf57d-adf2-4ee9-b062-b60572c65cca",
+      "name": "Append or update row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "ju9uXjz5U2Y45dhK",
+          "name": "GoogleAuth"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "60adddf3-9957-452b-ade5-5e28b8eb597d",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "2189c6832b7c28ccc1c077300bbe1e22d718c0a10d5386acbba4f504285f02b8"
+  },
+  "id": "4bMYkugLLbUbTKJA",
+  "tags": []
+}

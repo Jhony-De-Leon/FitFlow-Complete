@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.fitflow"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permiso de Internet aquí -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FitFlow">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_register_activity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.FitFlow" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_login_activity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.FitFlow" />
+
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:label="@string/title_forgot_password_activity"
+            android:parentActivityName=".LoginActivity"
+            android:theme="@style/Theme.FitFlow" />
+
+        <activity
+            android:name=".ChangePasswordActivity"
+            android:label="@string/title_change_password_activity"
+            android:parentActivityName=".ForgotPasswordActivity" 
+            android:theme="@style/Theme.FitFlow" />
+
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name" 
+            android:theme="@style/Theme.FitFlow" />
+
+        <activity
+            android:name=".FlowCoachActivity"
+            android:label="@string/title_activity_flow_coach"
+            android:parentActivityName=".HomeActivity"
+            android:theme="@style/Theme.FitFlow" />
+
+        <activity
+            android:name=".ActiveRoutineActivity"
+            android:label="Active Routine" 
+            android:parentActivityName=".HomeActivity" 
+            android:theme="@style/Theme.FitFlow" />
+        
+    </application>
+
+</manifest>

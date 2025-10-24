@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/goalsTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Define tus Objetivos"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/goalsDescriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(Aquí podrás seleccionar tus principales objetivos de fitness, como perder peso, ganar músculo, mejorar resistencia, etc. Esta sección se implementará con más detalle más adelante.)"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Ejemplo: podrías añadir aquí Spinners, RadioGroups o ChipGroups para seleccionar objetivos -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mainGoalInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Objetivo principal (opcional)">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mainGoalEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textShortMessage|textCapSentences"
+            android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

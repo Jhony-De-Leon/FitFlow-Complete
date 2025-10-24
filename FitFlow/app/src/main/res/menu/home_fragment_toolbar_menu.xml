@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_notifications"
+        android:icon="@android:drawable/ic_popup_reminder"
+        android:title="@string/content_desc_notifications"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_ai_chat"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="@string/content_desc_ai_chat"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_logout"
+        android:icon="@android:drawable/ic_lock_power_off"
+        android:title="@string/content_desc_logout"
+        app:showAsAction="ifRoom" />
+</menu>

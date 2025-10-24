@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Custom Toolbar Area -->
+        <ImageView
+            android:id="@+id/userAvatarImageView"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/placeholder_user_name"
+            app:srcCompat="@drawable/imagen_logo_rojo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/greetingTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/home_greeting_user_format"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+            app:layout_constraintStart_toEndOf="@id/userAvatarImageView"
+            app:layout_constraintTop_toTopOf="@id/userAvatarImageView"
+            app:layout_constraintEnd_toStartOf="@id/notificationIconImageView"/>
+
+        <TextView
+            android:id="@+id/readyToTrainTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/home_subtitle_ready_to_train"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintStart_toEndOf="@id/userAvatarImageView"
+            app:layout_constraintTop_toBottomOf="@id/greetingTextView"
+            app:layout_constraintEnd_toStartOf="@id/notificationIconImageView"/>
+
+        <ImageView
+            android:id="@+id/logoutIconImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_lock_power_off" 
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/userAvatarImageView"
+            app:layout_constraintBottom_toBottomOf="@id/userAvatarImageView"
+            android:contentDescription="@string/content_desc_logout" />
+
+        <ImageView
+            android:id="@+id/aiChatIconImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_dialog_email" 
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@id/logoutIconImageView"
+            app:layout_constraintTop_toTopOf="@id/userAvatarImageView"
+            app:layout_constraintBottom_toBottomOf="@id/userAvatarImageView"
+            android:contentDescription="@string/content_desc_ai_chat"/>
+
+        <ImageView
+            android:id="@+id/notificationIconImageView"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_popup_reminder" 
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toStartOf="@id/aiChatIconImageView"
+            app:layout_constraintTop_toTopOf="@id/userAvatarImageView"
+            app:layout_constraintBottom_toBottomOf="@id/userAvatarImageView"
+            android:contentDescription="@string/content_desc_notifications"/>
+
+        <!-- Progress Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/progressCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toBottomOf="@id/userAvatarImageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_progress_background"
+                android:padding="16dp">
+
+                <ProgressBar
+                    android:id="@+id/progressLoadingIndicator"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/todaysProgressTitleTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_card_todays_progress_title"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/progressPercentageTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_label_percentage_completed_format"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/todaysProgressTitleTextView" />
+
+                <!-- Calories -->
+                <ImageView
+                    android:id="@+id/caloriesIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="16dp"
+                    android:src="@android:drawable/btn_star" 
+                    app:tint="@android:color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/todaysProgressTitleTextView"
+                    app:layout_constraintEnd_toStartOf="@id/minutesIcon"/>
+
+                <TextView
+                    android:id="@+id/caloriesValueTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/placeholder_calories_value"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    app:layout_constraintStart_toStartOf="@id/caloriesIcon"
+                    app:layout_constraintEnd_toEndOf="@id/caloriesIcon"
+                    app:layout_constraintTop_toBottomOf="@id/caloriesIcon" />
+
+                <TextView
+                    android:id="@+id/caloriesLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_label_calories"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                    app:layout_constraintStart_toStartOf="@id/caloriesValueTextView"
+                    app:layout_constraintEnd_toEndOf="@id/caloriesValueTextView"
+                    app:layout_constraintTop_toBottomOf="@id/caloriesValueTextView" />
+
+                <!-- Minutes -->
+                <ImageView
+                    android:id="@+id/minutesIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_menu_recent_history" 
+                    app:tint="@android:color/white"
+                    app:layout_constraintStart_toEndOf="@id/caloriesIcon"
+                    app:layout_constraintTop_toTopOf="@id/caloriesIcon"
+                    app:layout_constraintEnd_toStartOf="@id/exercisesIcon"/>
+                
+                <TextView
+                    android:id="@+id/minutesValueTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/placeholder_minutes_value"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    app:layout_constraintStart_toStartOf="@id/minutesIcon"
+                    app:layout_constraintEnd_toEndOf="@id/minutesIcon"
+                    app:layout_constraintTop_toBottomOf="@id/minutesIcon" />
+
+                <TextView
+                    android:id="@+id/minutesLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_label_minutes"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                    app:layout_constraintStart_toStartOf="@id/minutesValueTextView"
+                    app:layout_constraintEnd_toEndOf="@id/minutesValueTextView"
+                    app:layout_constraintTop_toBottomOf="@id/minutesValueTextView" />
+
+                <!-- Exercises -->
+                <ImageView
+                    android:id="@+id/exercisesIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/checkbox_on_background" 
+                    app:tint="@android:color/white"
+                    app:layout_constraintStart_toEndOf="@id/minutesIcon"
+                    app:layout_constraintTop_toTopOf="@id/minutesIcon"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/exercisesValueTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/placeholder_exercises_value"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+                    app:layout_constraintStart_toStartOf="@id/exercisesIcon"
+                    app:layout_constraintEnd_toEndOf="@id/exercisesIcon"
+                    app:layout_constraintTop_toBottomOf="@id/exercisesIcon" />
+
+                <TextView
+                    android:id="@+id/exercisesLabelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/home_label_exercises"
+                    android:textColor="@android:color/white"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                    app:layout_constraintStart_toStartOf="@id/exercisesValueTextView"
+                    app:layout_constraintEnd_toEndOf="@id/exercisesValueTextView"
+                    app:layout_constraintTop_toBottomOf="@id/exercisesValueTextView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Action Buttons -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/startRoutineButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/home_button_start_routine"
+            android:backgroundTint="#34C759" 
+            android:textColor="@android:color/white"
+            app:cornerRadius="8dp"
+            app:layout_constraintTop_toBottomOf="@id/progressCardView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/viewProgressButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/viewProgressButton"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/home_button_view_progress"
+            app:strokeColor="@color/material_dynamic_primary40"
+            android:textColor="@color/material_dynamic_primary40"
+            app:cornerRadius="8dp"
+            app:layout_constraintTop_toTopOf="@id/startRoutineButton"
+            app:layout_constraintStart_toEndOf="@id/startRoutineButton"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Nutritional Tip Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/nutritionalTipCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#FFF9C4" 
+            app:layout_constraintTop_toBottomOf="@id/startRoutineButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/tipIconImageView"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@android:drawable/ic_menu_info_details" 
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:contentDescription="@string/home_card_nutritional_tip_title" />
+
+                <TextView
+                    android:id="@+id/tipTitleTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/home_card_nutritional_tip_title"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintStart_toEndOf="@id/tipIconImageView"
+                    app:layout_constraintTop_toTopOf="@id/tipIconImageView"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tipDescriptionTextView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/home_placeholder_nutritional_tip"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                    android:textColor="@android:color/darker_gray"
+                    app:layout_constraintTop_toBottomOf="@id/tipTitleTextView"
+                    app:layout_constraintStart_toStartOf="@id/tipTitleTextView"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
