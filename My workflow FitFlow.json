@@ -156,7 +156,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.7,
       "position": [
-        288,
+        496,
         0
       ],
       "id": "d69bf57d-adf2-4ee9-b062-b60572c65cca",
@@ -165,6 +165,28 @@
         "googleSheetsOAuth2Api": {
           "id": "ju9uXjz5U2Y45dhK",
           "name": "GoogleAuth"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "6217292779",
+        "text": "=💪🏋️La Información del trabajo realizado en FitFlow es la siguiente:  \n\n➡️Usuario: {{ $json.body.userName }}\n➡️Fecha: {{ $json.body.date }}\n➡️Rutina: {{ $json.body.routineTitle }}\n➡️Minutos trabajados: {{ $json.body.monthlyMinutes }}\n➡️Ejercicios trabajados: {{ $json.body.monthlyExercises }}\n➡️Dias trabjados en el mes: {{ $json.body.monthlyDays }}\n➡️Calorias quemadas: {{ $json.body.monthlyCalories }}\n\n🏋️‍♀️Esperamos seguir apoyandote en tu progreso y alcanzar el exito en tu vida fit con FitFlow 💪✨",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        208,
+        -128
+      ],
+      "id": "a0fce2ae-706c-4d83-9fcc-1dc810c39002",
+      "name": "Send a text message",
+      "webhookId": "6ef2d82c-8970-406d-b75d-6d3e9b4bfeb4",
+      "credentials": {
+        "telegramApi": {
+          "id": "1iBEJszktKEZH65c",
+          "name": "Telegram account 2"
         }
       }
     }
@@ -178,11 +200,21 @@
             "node": "Append or update row in sheet",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
     },
     "Append or update row in sheet": {
+      "main": [
+        []
+      ]
+    },
+    "Send a text message": {
       "main": [
         []
       ]
